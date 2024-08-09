@@ -1,0 +1,102 @@
+﻿/* General Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Table Container */
+table {
+    width: 90%; /* Decreased to 90% for a slight padding on the sides */
+    border-collapse: collapse;
+    margin: 50px auto; /* Center the table and maintain top/bottom margin */
+    font-size: 1.2rem; /* Increased font size */
+    min-width: 800px; /* Increased minimum width of the table */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+    /* Table Headers */
+    table thead th {
+        background-color: #343a40;
+        color: black; /* Changed text color to white for contrast */
+        text-align: left;
+        padding: 20px; /* Increased padding */
+        font-weight: 600;
+        border-bottom: 3px solid #dee2e6;
+        font-size: 1.4rem; /* Increased header font size */
+    }
+
+    /* Table Body */
+    table tbody td {
+        padding: 20px; /* Increased padding */
+        border-bottom: 1px solid #dee2e6;
+        color: #495057;
+        font-size: 1.2rem; /* Increased text size in the table body */
+    }
+
+    /* Zebra Stripes for Table Rows */
+    table tbody tr:nth-of-type(even) {
+        background-color: #f8f9fa;
+    }
+
+    /* Hover Effect on Table Rows */
+    table tbody tr:hover {
+        background-color: #e9ecef;
+        transform: scale(1.01);
+        transition: all 0.2s ease-in-out;
+    }
+
+    /* Action Buttons */
+    table tbody td .btn {
+        padding: 12px 24px; /* Increased padding for buttons */
+        margin: 0 4px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem; /* Increased font size */
+        font-weight: 600;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Edit Button */
+    table tbody td .btn-edit {
+        background-color: #007bff;
+    }
+
+        table tbody td .btn-edit:hover {
+            background-color: #0056b3;
+            transform: translateY(-3px);
+        }
+
+    /* Delete Button */
+    table tbody td .btn-delete {
+        background-color: #dc3545;
+    }
+
+        table tbody td .btn-delete:hover {
+            background-color: #a71d2a;
+            transform: translateY(-3px);
+        }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    table {
+        font-size: 1rem; /* Maintain larger font size on smaller screens */
+    }
+
+        table thead th, table tbody td {
+            padding: 16px; /* Adjusted padding for smaller screens */
+        }
+
+            /* Mobile Responsive Buttons */
+            table tbody td .btn {
+                padding: 10px 20px; /* Adjusted button size for smaller screens */
+                font-size: 0.9rem; /* Slightly smaller font size for buttons */
+            }
+}

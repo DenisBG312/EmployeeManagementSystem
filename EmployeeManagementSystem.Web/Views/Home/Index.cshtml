@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="~/css/index-page.css" />
+
+<div class="hero">
+    <h1 class="display-4">Welcome to the Employee Management System</h1>
+    <p>Effortlessly manage your workforce with precision and ease.</p>
+    <a href="/Employee/All" class="btn btn-primary">View Employees</a>
+    <a href="/Employee/Add" class="btn btn-secondary">Add Employee</a>
+</div>
+
+<div class="features container">
+    <div class="row">
+        <div class="col-md-4 feature">
+            <h3>Manage Employees</h3>
+            <p>Maintain accurate records of your employees, and perform seamless updates to the database.</p>
+        </div>
+        <div class="col-md-4 feature">
+            <h3>Performance Tracking</h3>
+            <p>Analyze employee performance with intuitive dashboards that help you make informed decisions.</p>
+        </div>
+        <div class="col-md-4 feature">
+            <h3>Comprehensive Reporting</h3>
+            <p>Generate detailed reports that provide insights into employee activities and productivity.</p>
+        </div>
+    </div>
+</div>

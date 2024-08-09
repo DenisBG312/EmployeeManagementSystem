@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EmployeeManagementSystem.Data.Migrations
 {
     [DbContext(typeof(EmployeeManagementDbContext))]
-    [Migration("20240809200906_Initial")]
+    [Migration("20240809225108_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -37,6 +37,10 @@ namespace EmployeeManagementSystem.Data.Migrations
 
                     b.Property<DateTime>("DateOfHire")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FirstName")
                         .IsRequired()

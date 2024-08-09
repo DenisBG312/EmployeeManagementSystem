@@ -1,18 +1,57 @@
-html {
-  font-size: 14px;
+/* Navbar Styling */
+nav.navbar {
+    background-color: #333; /* Dark background color */
+    padding: 1rem; /* Add padding */
+    color: #fff; /* White text color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    nav.navbar a.nav-link {
+        color: #fff; /* White color for links */
+        margin-right: 1.5rem; /* Spacing between links */
+        font-weight: bold; /* Bold text */
+        text-transform: uppercase; /* Uppercase letters */
+    }
+
+        nav.navbar a.nav-link:hover {
+            color: #007bff; /* Change link color on hover */
+            text-decoration: underline; /* Underline on hover */
+        }
+
+    nav.navbar .navbar-brand {
+        font-size: 1.5rem; /* Increase brand font size */
+        color: #007bff; /* Primary color for brand */
+        font-weight: bold; /* Bold text for brand */
+    }
+
+        nav.navbar .navbar-brand:hover {
+            color: #0056b3; /* Darker shade on hover */
+        }
+
+/* Footer Styling */
+footer {
+    background-color: #333; /* Dark background color */
+    color: #fff; /* White text color */
+    padding: 0.1rem; /* Add padding */
+    text-align: center; /* Center the text */
+    position: fixed; /* Fix the footer at the bottom */
+    width: 100%; /* Ensure the footer spans the entire width */
+    bottom: 0; /* Align at the bottom */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
 }
 
-html {
-  position: relative;
-  min-height: 100%;
-}
+    footer a {
+        color: #007bff; /* Primary color for links */
+        text-decoration: none; /* Remove underline from links */
+        margin-left: 0.5rem; /* Spacing between links */
+    }
 
-body {
-  margin-bottom: 60px;
-}
+        footer a:hover {
+            color: #0056b3; /* Darker shade on hover */
+            text-decoration: underline; /* Underline on hover */
+        }
+
+    footer p {
+        margin: 0; /* Remove default margin */
+        font-size: 0.9rem; /* Slightly smaller font size */
+    }

@@ -22,6 +22,7 @@ namespace EmployeeManagementSystem.Services.Data
                 FirstName = employeeModel.FirstName,
                 LastName = employeeModel.LastName,
                 DateOfBirth = employeeModel.DateOfBirth,
+                Email = employeeModel.Email,
                 DateOfHire = employeeModel.DateOfHire,
                 PhoneNumber = employeeModel.PhoneNumber,
                 Role = employeeModel.Role
@@ -45,6 +46,7 @@ namespace EmployeeManagementSystem.Services.Data
             {
                 FirstName = employee.FirstName,
                 LastName = employee.LastName,
+                Email = employee.Email,
                 DateOfBirth = employee.DateOfBirth,
                 DateOfHire = employee.DateOfHire,
                 PhoneNumber = employee.PhoneNumber,
@@ -64,6 +66,7 @@ namespace EmployeeManagementSystem.Services.Data
             employeeToEdit.LastName = model.LastName;
             employeeToEdit.DateOfHire = model.DateOfHire;
             employeeToEdit.PhoneNumber = model.PhoneNumber;
+            employeeToEdit.Email = model.Email;
             employeeToEdit.Role = model.Role;
             employeeToEdit.DateOfBirth = model.DateOfBirth;
 

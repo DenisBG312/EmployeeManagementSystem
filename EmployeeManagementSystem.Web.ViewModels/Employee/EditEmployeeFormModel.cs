@@ -18,6 +18,8 @@ namespace EmployeeManagementSystem.Web.ViewModels.Employee
 
         [Required]
         public DateTime DateOfHire { get; set; }
+        [Required]
+        public string Email { get; set; } = null!;
 
         [Required]
         public string PhoneNumber { get; set; } = null!;

@@ -6,7 +6,9 @@
     ViewData["Title"] = "Edit Employee";
 }
 
-<h2>@ViewData["Title"]</h2>
+<link rel="stylesheet" href="~/css/edit-page.css">
+
+<h2 class="text-center">@ViewData["Title"]</h2>
 
 <form asp-action="Edit" method="post">
     <div class="form-group">
@@ -31,6 +33,12 @@
         <label asp-for="DateOfHire" class="control-label"></label>
         <input asp-for="DateOfHire" class="form-control" type="date" />
         <span asp-validation-for="DateOfHire" class="text-danger"></span>
+    </div>
+    
+    <div class="form-group">
+        <label asp-for="Email" class="control-label"></label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
     </div>
 
     <div class="form-group">

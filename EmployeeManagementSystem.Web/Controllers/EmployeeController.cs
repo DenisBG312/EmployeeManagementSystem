@@ -64,7 +64,7 @@ namespace EmployeeManagementSystem.Web.Controllers
             {
                 await employeeService.EditEventById(id.Value, model);
 
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("All", "Employee");
             }
             catch (Exception e)
             {

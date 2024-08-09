@@ -19,6 +19,7 @@ namespace EmployeeManagementSystem.Data.Migrations
                     LastName = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
                     DateOfBirth = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DateOfHire = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Role = table.Column<int>(type: "int", nullable: false)
                 },

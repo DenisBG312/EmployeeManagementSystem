@@ -3,6 +3,7 @@ using EmployeeManagementSystem.Data.Models;
 using EmployeeManagementSystem.Services.Data.Interfaces;
 using EmployeeManagementSystem.Web.ViewModels.Employee;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace EmployeeManagementSystem.Services.Data
 {
@@ -32,7 +33,7 @@ namespace EmployeeManagementSystem.Services.Data
             await dbContext.SaveChangesAsync();
         }
 
-        public async Task<EditEmployeeFormModel> GetEventById(int id)
+        public async Task<EditEmployeeFormModel> GetEmployeeById(int id)
         {
             var employee = await dbContext.Employees
                 .FirstOrDefaultAsync(e => e.Id == id);
@@ -92,6 +93,29 @@ namespace EmployeeManagementSystem.Services.Data
             var allEmployees = await dbContext.Employees.ToListAsync();
 
             return allEmployees;
+        }
+
+        public async Task<EditEmployeeFormModel> GetEmployeeDetailsById(int id)
+        {
+            var employeeModel = await dbContext.Employees.FindAsync(id);
+
+            if (employeeModel == null)
+            {
+                throw new ArgumentNullException();
+            }
+
+            var employeeDetails = new EditEmployeeFormModel()
+            {
+                FirstName = employeeModel.FirstName,
+                LastName = employeeModel.LastName,
+                Email = employeeModel.Email,
+                DateOfBirth = employeeModel.DateOfBirth,
+                DateOfHire = employeeModel.DateOfHire,
+                PhoneNumber = employeeModel.PhoneNumber,
+                Role = employeeModel.Role
+            };
+
+            return employeeDetails;
         }
     }
 }

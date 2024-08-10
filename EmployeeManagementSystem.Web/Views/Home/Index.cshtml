@@ -10,23 +10,12 @@
     <p class="lead">Your one-stop solution for managing and attending events.</p>
     <hr class="my-4">
     <p>Explore the upcoming events or add your own.</p>
-    <a class="btn btn-primary btn-lg" asp-area="" asp-controller="Employee" asp-action="All" role="button">
+    <a class="btn btn-warning btn-lg" asp-area="" asp-controller="Employee" asp-action="All" role="button">
         <i class="fas fa-calendar-alt"></i> View Employees
     </a>
 </div>
 
 <div class="card-container d-flex justify-content-around">
-    <!-- Engaging Hero Card -->
-    <div class="card hero-card">
-        <div class="card-body text-center">
-            <img class="card-img-top rounded-circle" src="imgs/good_programmer_comarch.jpg" alt="Friendly person">
-            <h5 class="card-title mt-3">Connect with Your Team</h5>
-            <p class="card-text">Our platform helps you build stronger connections with your team and manage events effortlessly.</p>
-            <a href="@Url.Action("All", "Employee")" class="btn btn-primary btn-lg">
-                <i class="fas fa-users"></i> Explore Your Team
-            </a>
-        </div>
-    </div>
 
     <!-- Informative Event Card -->
     <div class="card info-card">
@@ -36,6 +25,18 @@
             <p class="card-text">Stay organized with our intuitive event management tools. Perfect for planning and coordination.</p>
             <a href="@Url.Action("Add", "Employee")" class="btn btn-primary">
                 <i class="fas fa-plus-circle"></i> Add New Employee
+            </a>
+        </div>
+    </div>
+    
+    <!-- Engaging Hero Card -->
+    <div class="card hero-card">
+        <div class="card-body text-center">
+            <img class="card-img-top rounded-circle" src="imgs/good_programmer_comarch.jpg" alt="Friendly person">
+            <h5 class="card-title mt-3">Connect with Your Team</h5>
+            <p class="card-text">Our platform helps you build stronger connections with your team and manage events effortlessly.</p>
+            <a href="@Url.Action("All", "Employee")" class="btn btn-primary btn-lg">
+                <i class="fas fa-users"></i> Explore Your Team
             </a>
         </div>
     </div>

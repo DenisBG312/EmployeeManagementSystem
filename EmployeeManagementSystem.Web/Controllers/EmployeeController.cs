@@ -42,7 +42,7 @@ namespace EmployeeManagementSystem.Web.Controllers
 
             try
             {
-                var formModel = await employeeService.GetEventById(id.Value);
+                var formModel = await employeeService.GetEmployeeById(id.Value);
 
                 return View(formModel);
             }
@@ -88,6 +88,46 @@ namespace EmployeeManagementSystem.Web.Controllers
             var employees = await employeeService.GetAllEmployees();
 
             return View(employees);
+        }
+
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (!id.HasValue)
+            {
+                throw new InvalidOperationException();
+            }
+
+            var employeeDetails = await employeeService.GetEmployeeDetailsById(id.Value);
+
+            return View(employeeDetails);
+        }
+
+        private async Task<EditEmployeeFormModel> GetEmployeeDetailsById(int? id)
+        {
+
+            if (!id.HasValue)
+            {
+                throw new InvalidOperationException();
+            }
+            var employeeModel = await employeeService.GetEmployeeById(id.Value);
+
+            if (employeeModel == null)
+            {
+                throw new ArgumentNullException();
+            }
+
+            var employeeDetails = new EditEmployeeFormModel()
+            {
+                FirstName = employeeModel.FirstName,
+                LastName = employeeModel.LastName,
+                Email = employeeModel.Email,
+                DateOfBirth = employeeModel.DateOfBirth,
+                DateOfHire = employeeModel.DateOfHire,
+                PhoneNumber = employeeModel.PhoneNumber,
+                Role = employeeModel.Role
+            };
+
+            return employeeDetails;
         }
     }
 }

@@ -1,62 +1,59 @@
 ﻿@using EmployeeManagementSystem.Data.Models.Enum
 @using Microsoft.AspNetCore.Mvc.TagHelpers
-@model EmployeeManagementSystem.Web.ViewModels.Employee.AddEmployeeFormModel
+@model EmployeeManagementSystem.Web.ViewModels.Employee.EditEmployeeFormModel
 
 @{
-    ViewData["Title"] = "Add an Employee";
+    ViewData["Title"] = $"Details about {Model.FirstName} {Model.LastName}";
 }
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-<link rel="stylesheet" href="~/css/add-page.css" />
+<link rel="stylesheet" href="~/css/edit-page.css" />
 
 <h2 class="text-center">@ViewData["Title"]</h2>
 
-<form asp-action="Add" method="post">
+<form method="post" class="edit-form">
     <div class="form-group">
         <label asp-for="FirstName" class="control-label"></label>
-        <input asp-for="FirstName" class="form-control" />
+        <input asp-for="FirstName" class="form-control" readonly />
         <span asp-validation-for="FirstName" class="text-danger"></span>
     </div>
 
     <div class="form-group">
         <label asp-for="LastName" class="control-label"></label>
-        <input asp-for="LastName" class="form-control" />
+        <input asp-for="LastName" class="form-control" readonly />
         <span asp-validation-for="LastName" class="text-danger"></span>
     </div>
 
     <div class="form-group">
         <label asp-for="DateOfBirth" class="control-label"></label>
-        <input asp-for="DateOfBirth" class="form-control" type="date" />
+        <input asp-for="DateOfBirth" class="form-control" type="date" readonly />
         <span asp-validation-for="DateOfBirth" class="text-danger"></span>
     </div>
 
     <div class="form-group">
         <label asp-for="DateOfHire" class="control-label"></label>
-        <input asp-for="DateOfHire" class="form-control" type="date" />
+        <input asp-for="DateOfHire" class="form-control" type="date" readonly />
         <span asp-validation-for="DateOfHire" class="text-danger"></span>
     </div>
 
     <div class="form-group">
         <label asp-for="Email" class="control-label"></label>
-        <input asp-for="Email" class="form-control" />
+        <input asp-for="Email" class="form-control" readonly />
         <span asp-validation-for="Email" class="text-danger"></span>
     </div>
 
     <div class="form-group">
         <label asp-for="PhoneNumber" class="control-label"></label>
-        <input asp-for="PhoneNumber" class="form-control" />
+        <input asp-for="PhoneNumber" class="form-control" readonly />
         <span asp-validation-for="PhoneNumber" class="text-danger"></span>
     </div>
 
     <div class="form-group">
         <label asp-for="Role" class="control-label"></label>
-        <select asp-for="Role" class="form-control" asp-items="Html.GetEnumSelectList<Role>()"></select>
+        <select asp-for="Role" class="form-control" asp-items="Html.GetEnumSelectList<Role>()" disabled></select>
         <span asp-validation-for="Role" class="text-danger"></span>
     </div>
 
-    <button type="submit" class="btn btn-primary mt-3">
-        Submit <i class="fa-solid fa-check"></i>
-    </button>
+    <a href="@Url.Action("All", "Employee")" class="btn btn-primary mt-3">Return To All Employees</a>
 </form>
 
 @section Scripts {

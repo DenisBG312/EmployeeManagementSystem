@@ -4,11 +4,22 @@
     ViewData["Title"] = "All Employees";
 }
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 <link rel="stylesheet" href="~/css/all-page.css" />
 
+<!-- Title and Button Row -->
+<div class="row align-items-center mb-3">
+    <div class="col">
+        <h2>@ViewData["Title"]</h2>
+    </div>
+    <div class="col text-end">
+        <a href="@Url.Action("Add", "Employee")" class="btn btn-primary">
+            <i class="fas fa-user-plus"></i> Add New Employee
+        </a>
+    </div>
+</div>
 
-<h2>@ViewData["Title"]</h2>
-
+<!-- Employees Table -->
 <table class="table">
     <thead>
         <tr>
@@ -34,8 +45,9 @@
                 <td>@employee.PhoneNumber</td>
                 <td>@employee.Role.ToString()</td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@employee.Id" class="btn btn-primary">Edit</a>
-                    <a href="#" class="btn btn-danger btn-delete" data-url="@Url.Action("Delete", new { id = employee.Id })">Delete</a>
+                    <a asp-action="Details" asp-route-id="@employee.Id" class="btn btn-primary"><i class="fa-solid fa-circle-info"></i> Details</a>
+                    <a asp-action="Edit" asp-route-id="@employee.Id" class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i> Edit</a>
+                    <a href="#" class="btn btn-danger btn-delete" data-url="@Url.Action("Delete", new { id = employee.Id })"><i class="fa-solid fa-trash-can"></i> Delete</a>
                 </td>
             </tr>
         }

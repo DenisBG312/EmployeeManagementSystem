@@ -29,7 +29,7 @@ namespace EmployeeManagementSystem.Web.Controllers
 
             await employeeService.AddEmployee(model);
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("All", "Employee");
         }
 
         [HttpGet]
@@ -80,7 +80,7 @@ namespace EmployeeManagementSystem.Web.Controllers
             }
 
             await employeeService.DeleteEventById(id.Value);
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("All", "Employee");
         }
 
         public async Task<IActionResult> All()

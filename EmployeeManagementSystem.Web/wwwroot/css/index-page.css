@@ -1,228 +1,105 @@
-﻿/* General Styling */
-body {
-    background-color: #f3f4f6;
-    font-family: 'Poppins', sans-serif;
-    color: #333;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
+﻿/* Button Styling */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
 }
 
-/* Hero Section Styling */
-.hero {
-    background: linear-gradient(135deg, #007bff 0%, #6c63ff 100%);
-    color: white;
-    padding: 80px 20px; /* Reduced padding */
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    .btn-primary:hover {
+        background-color: #0056b3;
+        border-color: #004a9b;
+    }
+
+/* Jumbotron Styling */
+.jumbotron {
+    background-color: #007bff;
+    color: #fff;
+    padding: 3rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
 }
 
-    .hero h1 {
-        font-size: 3rem; /* Reduced font size */
-        margin-bottom: 15px; /* Reduced margin */
-        animation: fadeInDown 1.2s ease-in-out;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 2px; /* Reduced letter-spacing */
-        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    .jumbotron h1 {
+        font-weight: bold;
+        color: #fff; /* Change title color to white */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional: Add a text shadow */
     }
 
-    .hero p {
-        font-size: 1.2rem; /* Reduced font size */
-        margin-bottom: 30px; /* Reduced margin */
-        animation: fadeInUp 1.2s ease-in-out;
-        font-weight: 300;
-        letter-spacing: 1px;
-        text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
+    .jumbotron p {
+        font-size: 1.2em;
     }
 
-    .hero .btn-primary, .hero .btn-secondary {
-        font-size: 1rem; /* Slightly reduced font size */
-        padding: 10px 30px; /* Reduced padding */
-        border-radius: 25px; /* Slightly reduced border-radius */
-        transition: all 0.3s ease;
-        text-transform: uppercase;
-        font-weight: 600;
-        letter-spacing: 1.2px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-        color: #fff; /* Text color white for all buttons */
-    }
-
-    /* Primary Button - Soft Blue */
-    .hero .btn-primary {
-        background-color: #5a9bd4; /* Soft blue color */
-        border-color: #5a9bd4;
-    }
-
-        .hero .btn-primary:hover {
-            background-color: #3e7bb6; /* Slightly darker on hover */
-            border-color: #3e7bb6;
-            transform: translateY(-4px);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25);
-        }
-
-    /* Secondary Button - Soft Coral */
-    .hero .btn-secondary {
-        background-color: #f76c6c; /* Soft coral color */
-        border-color: #f76c6c;
-    }
-
-        .hero .btn-secondary:hover {
-            background-color: #e05555; /* Slightly darker on hover */
-            border-color: #e05555;
-            transform: translateY(-4px);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25);
-        }
-
-/* Features Section Styling */
-.features {
-    padding: 80px 0; /* Slightly reduced padding */
-    background-color: #f8f9fa;
-    margin-top: -50px;
-    box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.1);
-    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 85%);
-    text-align: center;
-}
-
-    .features .feature {
-        text-align: center;
-        margin-bottom: 50px;
-        padding: 30px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        border-radius: 15px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        background-color: white;
+    .jumbotron .btn-primary {
+        background-color: #ffc107;
+        border-color: #ffc107;
         color: #333;
+        font-size: 1.2em;
     }
 
-        .features .feature:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        .jumbotron .btn-primary:hover {
+            background-color: #e0a800;
+            border-color: #d39e00;
         }
 
-        .features .feature h3 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: #007bff;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .features .feature p {
-            font-size: 1.1rem;
-            color: #666;
-            line-height: 1.8;
-            margin-bottom: 0;
-        }
-
-/* Navbar Styling */
-nav.navbar {
-    background-color: #333; /* Dark background color */
-    padding: 1rem; /* Add padding */
-    color: #fff; /* White text color */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Space between the cards */
 }
 
-    nav.navbar a.nav-link {
-        color: #fff; /* White color for links */
-        margin-right: 1.5rem; /* Spacing between links */
-        font-weight: bold; /* Bold text */
-        text-transform: uppercase; /* Uppercase letters */
-    }
-
-        nav.navbar a.nav-link:hover {
-            color: #007bff; /* Change link color on hover */
-            text-decoration: underline; /* Underline on hover */
-        }
-
-    nav.navbar .navbar-brand {
-        font-size: 1.5rem; /* Increase brand font size */
-        color: #007bff; /* Primary color for brand */
-        font-weight: bold; /* Bold text for brand */
-    }
-
-        nav.navbar .navbar-brand:hover {
-            color: #0056b3; /* Darker shade on hover */
-        }
-
-/* Footer Styling */
-footer {
-    background-color: #333; /* Dark background color */
-    color: #fff; /* White text color */
-    padding: 1rem; /* Add padding */
-    text-align: center; /* Center the text */
-    position: fixed; /* Fix the footer at the bottom */
-    width: 100%; /* Ensure the footer spans the entire width */
-    bottom: 0; /* Align at the bottom */
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #f8f9fa;
+    width: 100%; /* Full width within its container */
+    max-width: 500px; /* Restrict max width of each card */
 }
 
-    footer a {
-        color: #007bff; /* Primary color for links */
-        text-decoration: none; /* Remove underline from links */
-        margin-left: 0.5rem; /* Spacing between links */
-    }
-
-        footer a:hover {
-            color: #0056b3; /* Darker shade on hover */
-            text-decoration: underline; /* Underline on hover */
-        }
-
-    footer p {
-        margin: 0; /* Remove default margin */
-        font-size: 0.9rem; /* Slightly smaller font size */
-    }
-
-/* Animations */
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.hero-card, .info-card {
+    flex: 1; /* Allow cards to grow equally */
 }
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
+    .hero-card .card-body, .info-card .card-body {
+        padding: 2rem;
     }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.card-img-top {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
+.info-card .fa-3x {
+    color: #007bff;
 }
 
-/* Responsive Design for Smaller Screens */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.5rem; /* Further reduce font size */
+.btn-primary, .btn-success {
+    border-radius: 50px;
+    font-size: 1.1rem;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border: none;
+}
+
+    .btn-primary:hover, .btn-success:hover {
+        opacity: 0.9;
     }
 
-    .hero p {
-        font-size: 1.1rem; /* Further reduce font size */
-    }
+.card-title {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
 
-    .features .feature {
-        padding: 15px;
-    }
+.card-text {
+    color: #6c757d;
 }

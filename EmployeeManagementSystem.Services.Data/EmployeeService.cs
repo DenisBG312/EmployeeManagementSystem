@@ -82,7 +82,8 @@ namespace EmployeeManagementSystem.Services.Data
                 throw new ArgumentNullException();
             }
 
-            dbContext.Employees.Remove(employee);
+            employee.IsDeleted = true;
+            dbContext.Employees.Update(employee);
             await dbContext.SaveChangesAsync();
         }
 

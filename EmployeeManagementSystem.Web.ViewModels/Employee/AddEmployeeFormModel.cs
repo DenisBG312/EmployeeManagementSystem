@@ -17,8 +17,10 @@ namespace EmployeeManagementSystem.Web.ViewModels.Employee
         [Required]
         public DateTime DateOfHire { get; set; }
         [Required]
+        [RegularExpression(EmployeeEmailRegex, ErrorMessage = "Please enter a valid email address.")]
         public string Email { get; set; } = null!;
         [Required]
+        [RegularExpression(EmployeePhoneRegex, ErrorMessage = "Please enter a valid phone number.")]
         public string PhoneNumber { get; set; } = null!;
         [Required]
         public Role Role { get; set; }
